@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS admins (
 
 -- Insert default admin
 INSERT INTO admins (email, password) VALUES 
-('admin@example.com', '$2a$10$4Dt9lGY8UHOGFZFjSTDpjOmG.X3Pm3A5IlDAVkoryJs6q8cfNCnne');
+('your mail id', 'password');
 
 -- Create students table
 CREATE TABLE IF NOT EXISTS students (
