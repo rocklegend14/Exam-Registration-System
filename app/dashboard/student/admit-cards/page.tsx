@@ -76,7 +76,7 @@ export default function AdmitCardsPage() {
       }
       
       // Fetch registered exams that have seat allocations
-      const response = await fetch(`http://localhost:3001/api/exams/student/registrations?student_id=${studentId}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/student/registrations?student_id=${studentId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -171,7 +171,7 @@ export default function AdmitCardsPage() {
       })
       
       // First verify the payment status again and get admit card data
-      const response = await fetch(`http://localhost:3001/api/exams/admit-card/${examId}/${studentId}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/admit-card/${examId}/${studentId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -444,7 +444,7 @@ export default function AdmitCardsPage() {
       })
       
       // Fetch admit card data
-      const response = await fetch(`http://localhost:3001/api/exams/admit-card/${examId}/${studentId}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/admit-card/${examId}/${studentId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

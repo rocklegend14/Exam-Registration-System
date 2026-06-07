@@ -78,7 +78,7 @@ export default function PaymentsPage() {
       }
       
       // Fetch completed payments
-      const response = await fetch(`http://localhost:3001/api/payments?student_id=${studentId}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/payments?student_id=${studentId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -141,7 +141,7 @@ export default function PaymentsPage() {
       }
       
       // Fetch registrations that don't have a payment yet
-      const response = await fetch(`http://localhost:3001/api/exams/student/registrations?student_id=${studentId}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/student/registrations?student_id=${studentId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -240,7 +240,7 @@ export default function PaymentsPage() {
       })
       
       // Process payment via API
-      const response = await fetch('http://localhost:3001/api/payments', {
+      const response = await fetch('https://exam-registration-system-6ncs.onrender.com/api/payments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -275,7 +275,7 @@ export default function PaymentsPage() {
         })
         
         // Call the seat allocation API
-        const seatResponse = await fetch('http://localhost:3001/api/exams/allocate-seat', {
+        const seatResponse = await fetch('https://exam-registration-system-6ncs.onrender.com/api/exams/allocate-seat', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -319,7 +319,7 @@ export default function PaymentsPage() {
             localStorage.removeItem('registrationsCache')
             
             // Force refresh the student's data before redirecting
-            fetch(`http://localhost:3001/api/exams/student/registrations?student_id=${studentId}&forceRefresh=true`, {
+            fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/student/registrations?student_id=${studentId}&forceRefresh=true`, {
               headers: {
                 'Authorization': `Bearer ${token}`
               }

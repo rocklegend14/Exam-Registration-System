@@ -76,7 +76,7 @@ export default function ExamsPage() {
       }
       
       // Fetch available exams from the API
-      const response = await fetch('http://localhost:3001/api/exams', {
+      const response = await fetch('https://exam-registration-system-6ncs.onrender.com/api/exams', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -151,7 +151,7 @@ export default function ExamsPage() {
       }
       
       // Fetch registered exams from the API
-      const response = await fetch(`http://localhost:3001/api/exams/student/registrations?student_id=${studentId}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/student/registrations?student_id=${studentId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -284,7 +284,7 @@ export default function ExamsPage() {
       }
       
       // Call the API to register for the exam
-      const response = await fetch('http://localhost:3001/api/exams/register', {
+      const response = await fetch('https://exam-registration-system-6ncs.onrender.com/api/exams/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -379,7 +379,7 @@ export default function ExamsPage() {
       })
       
       // Fetch admit card data
-      const response = await fetch(`http://localhost:3001/api/exams/admit-card/${examId}/${studentId}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/admit-card/${examId}/${studentId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

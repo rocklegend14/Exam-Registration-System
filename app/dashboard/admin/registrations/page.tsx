@@ -73,7 +73,7 @@ export default function AdminRegistrationsPage() {
   const fetchRegistrations = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch("http://localhost:3001/api/exams/registrations", {
+      const response = await fetch("https://exam-registration-system-6ncs.onrender.com/api/exams/registrations", {
         headers: {
           "Authorization": `Bearer ${localStorage.getItem('token')}`
         }
@@ -117,7 +117,7 @@ export default function AdminRegistrationsPage() {
   // Fetch all exams for the filter dropdown
   const fetchExams = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/exams", {
+      const response = await fetch("https://exam-registration-system-6ncs.onrender.com/api/exams", {
         headers: {
           "Authorization": `Bearer ${localStorage.getItem('token')}`
         }
@@ -191,7 +191,7 @@ export default function AdminRegistrationsPage() {
       console.log("Sending allocation data:", allocationData)
 
       // Call the API to save the allocation
-      const response = await fetch(`http://localhost:3001/api/exams/allocate-seat`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/allocate-seat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -260,7 +260,7 @@ export default function AdminRegistrationsPage() {
       // Call the API to auto-allocate seats
       // Note: The backend logic handles finding registrations that need allocation,
       // so we don't need to send specific registration IDs
-      const response = await fetch(`http://localhost:3001/api/exams/auto-allocate`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/auto-allocate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

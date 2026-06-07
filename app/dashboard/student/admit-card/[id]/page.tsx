@@ -38,7 +38,7 @@ export default function AdmitCardPage() {
         const examId = params.id
         
         // Fetch admit card data from the backend
-        const response = await fetch(`http://localhost:3001/api/exams/admit-card/${examId}/${studentId}`)
+        const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/admit-card/${examId}/${studentId}`)
         const data = await response.json()
         
         if (!response.ok) {

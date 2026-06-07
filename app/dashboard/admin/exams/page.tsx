@@ -58,7 +58,7 @@ export default function AdminExamsPage() {
 
   const fetchExams = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/exams');
+      const response = await fetch('https://exam-registration-system-6ncs.onrender.com/api/exams');
       if (!response.ok) {
         throw new Error('Failed to fetch exams');
       }
@@ -122,7 +122,7 @@ export default function AdminExamsPage() {
     }
     try {
       setIsLoading(true);
-      const response = await fetch('http://localhost:3001/api/exams', {
+      const response = await fetch('https://exam-registration-system-6ncs.onrender.com/api/exams', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -180,7 +180,7 @@ export default function AdminExamsPage() {
       if (!token) {
         throw new Error('Authentication required');
       }
-      const response = await fetch(`http://localhost:3001/api/exams/${selectedExam.id}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/${selectedExam.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -228,7 +228,7 @@ export default function AdminExamsPage() {
         throw new Error('Authentication required');
       }
 
-      const response = await fetch(`http://localhost:3001/api/exams/${selectedExam.id}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/${selectedExam.id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

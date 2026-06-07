@@ -29,7 +29,7 @@ export default function MyExamsPage() {
                 throw new Error('Student ID not found')
             }
 
-            const response = await fetch(`http://localhost:3001/api/exams/registrations?student_id=${studentId}`)
+            const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/registrations?student_id=${studentId}`)
             if (!response.ok) throw new Error('Failed to fetch registered exams')
             
             const data = await response.json()

@@ -101,7 +101,7 @@ export default function AdminDashboard() {
           return
         }
         
-        const response = await fetch("http://localhost:3001/api/exams", {
+        const response = await fetch("https://exam-registration-system-6ncs.onrender.com/api/exams", {
           headers: {
             "Authorization": `Bearer ${token}`
           }
@@ -199,7 +199,7 @@ export default function AdminDashboard() {
       };
 
       // Update the exam via API
-      const response = await fetch(`http://localhost:3001/api/exams/${examToUpdate.id}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/${examToUpdate.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -274,7 +274,7 @@ export default function AdminDashboard() {
       }
 
       // Delete the exam via API
-      const response = await fetch(`http://localhost:3001/api/exams/${selectedExam.id}`, {
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/${selectedExam.id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

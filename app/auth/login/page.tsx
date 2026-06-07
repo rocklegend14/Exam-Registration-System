@@ -30,8 +30,8 @@ export default function LoginPage() {
     try {
       // Determine the endpoint based on user type
       const endpoint = userType === "student" 
-        ? 'http://localhost:3001/api/students/login'
-        : 'http://localhost:3001/api/admin/login';
+        ? 'https://exam-registration-system-6ncs.onrender.com/api/students/login'
+        : 'https://exam-registration-system-6ncs.onrender.com/api/admin/login';
 
       const response = await fetch(endpoint, {
         method: 'POST',

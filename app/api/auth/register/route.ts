@@ -16,7 +16,7 @@ export async function POST(request: Request) {
         console.log('Making request to backend with data:', { name, email, roll_number, department });
 
         // Make request to backend
-        const response = await fetch('http://localhost:3001/api/students/register', {
+        const response = await fetch('https://exam-registration-system-6ncs.onrender.com/api/students/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

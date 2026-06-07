@@ -60,7 +60,7 @@ export default function StudentDashboard() {
   // Fetch available exams from the backend
   const fetchExams = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/exams');
+      const response = await fetch('https://exam-registration-system-6ncs.onrender.com/api/exams');
       if (!response.ok) {
         throw new Error('Failed to fetch exams');
       }
@@ -127,7 +127,7 @@ export default function StudentDashboard() {
       console.log('Fetching registrations for student ID:', studentId);
 
       // Changed to use regular registrations endpoint and filter on the frontend
-      const response = await fetch(`http://localhost:3001/api/exams/registrations`);
+      const response = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/registrations`);
       
       // Check if response is ok
       if (!response.ok) {
@@ -149,7 +149,7 @@ export default function StudentDashboard() {
         // If we have registrations, we need to get the full exam details for each one
         if (studentRegistrations.length > 0) {
           // Get all exams
-          const examsResponse = await fetch('http://localhost:3001/api/exams');
+          const examsResponse = await fetch('https://exam-registration-system-6ncs.onrender.com/api/exams');
           let exams: any[] = [];
           
           if (examsResponse.ok) {
@@ -287,7 +287,7 @@ export default function StudentDashboard() {
       }
       
       // First, check if student is already registered for this exam
-      const checkResponse = await fetch(`http://localhost:3001/api/exams/registrations`);
+      const checkResponse = await fetch(`https://exam-registration-system-6ncs.onrender.com/api/exams/registrations`);
       if (!checkResponse.ok) {
         throw new Error('Failed to check existing registrations');
       }
@@ -327,7 +327,7 @@ export default function StudentDashboard() {
       console.log('Selected exam for registration:', selectedExam);
       
       // Call API to register for exam
-      const response = await fetch('http://localhost:3001/api/exams/register', {
+      const response = await fetch('https://exam-registration-system-6ncs.onrender.com/api/exams/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -453,7 +453,7 @@ export default function StudentDashboard() {
       console.log('Sending payment data:', JSON.stringify(paymentData));
       
       // Call payment API
-      const response = await fetch('http://localhost:3001/api/payments', {
+      const response = await fetch('https://exam-registration-system-6ncs.onrender.com/api/payments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

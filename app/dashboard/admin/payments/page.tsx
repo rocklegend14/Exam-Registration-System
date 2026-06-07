@@ -52,7 +52,7 @@ export default function AdminPaymentsPage() {
           return
         }
         
-        const response = await fetch("http://localhost:3001/api/payments", {
+        const response = await fetch("https://exam-registration-system-6ncs.onrender.com/api/payments", {
           headers: {
             "Authorization": `Bearer ${token}`
           }
